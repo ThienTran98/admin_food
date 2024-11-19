@@ -22,14 +22,14 @@ html {
 }
 
 .content {
-  background-color: #f2f2f2;
+  background: url("../img/Group 177.png") top center / cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  height: 100%;
   padding-bottom: 262px;
 }
-
 .content__logo {
   padding: 46px 0;
 }
