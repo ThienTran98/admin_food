@@ -89,6 +89,7 @@
   border: 2px solid #008134;
   border-radius: 10px;
   cursor: pointer;
+  background-color: #fff;
 }
 
 .content__item + .content__item {
