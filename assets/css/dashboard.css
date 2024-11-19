@@ -1,0 +1,279 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 30px 79px 30px 0;
+}
+
+.header__btn {
+  border: none;
+  background-color: #008134;
+  padding: 9px 14px;
+  border-radius: 10px;
+  margin-right: 33px;
+}
+
+.header__btn a {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 24px;
+  color: #fff;
+  display: block;
+}
+
+.header__logout {
+  display: flex;
+  align-items: center;
+  padding-left: 14px;
+  border-left: 4px solid #ff8102;
+  color: #ff8102;
+}
+
+.header__logout--text {
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.header__logout--icon {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.side__bar {
+  width: 242px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 2;
+}
+
+.side__bar--img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.side__bar--img img {
+  width: 90px;
+  height: 100px;
+}
+.side__bar--list {
+  padding: 0 24px;
+  margin-bottom: 68px;
+}
+
+.side__bar--item {
+  padding: 10px 0px 10px 16px;
+  display: flex;
+  align-items: center;
+  width: 194px;
+  height: 48px;
+  border: 2px solid #00813459;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.side__bar--item.active {
+  background-color: #ff8102;
+}
+
+.side__bar--item:hover {
+  opacity: 0.8;
+  background-color: #ff8102;
+  transition: all 0.3s;
+  border: none;
+}
+.side__bar--item:first-child {
+  margin-bottom: 22px;
+}
+.side__bar--item + .side__bar--item {
+  margin-bottom: 22px;
+}
+
+.side__item--img {
+  width: 28px;
+  height: 28px;
+  margin-right: 4px;
+}
+
+.side__item--text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 34px;
+  margin-bottom: 0;
+}
+.side__bar--goal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top: 3px solid #008134b0;
+}
+
+.side__goal--heading {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+}
+
+.side__goal--decs {
+  background: url("../img/138.png") top center / cover no-repeat;
+  padding-top: 50%;
+  height: 260px;
+}
+
+.side__goal--decs h3 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+  color: #fff;
+  position: relative;
+  top: -52px;
+  text-align: center;
+}
+.content {
+  margin-left: 242px;
+  background-color: #f3f3f3;
+  padding: 44px;
+  height: 100vh;
+}
+
+.content__function {
+  display: flex;
+  align-items: center;
+}
+
+.content__function--item {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  min-width: 186px;
+  cursor: pointer;
+}
+.content__function--item:hover {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+.content__function--item-add {
+  background-color: #008134;
+}
+.content__function--item-export {
+  background-color: #ff8102;
+}
+
+.content__item--icon {
+  font-size: 22px;
+  color: #fff;
+}
+
+.content__item--text {
+  margin-bottom: 0;
+  margin-left: 8px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #fff;
+}
+
+.content__search {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.content__search--container {
+  background-color: #fff;
+  padding: 6px 24px;
+  width: 450px;
+  display: flex;
+  align-items: center;
+  border-radius: 12px;
+  border: 2px solid #008134;
+}
+.content__icon {
+  width: 40px;
+  height: 40px;
+  background-color: #008134;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.content__icon:hover {
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+.content__search--icon {
+  font-size: 20px;
+  color: #fff;
+}
+
+.content__search--input {
+  outline: none;
+  border: none;
+  list-style-type: none;
+  border: transparent;
+  display: block;
+  flex-grow: 1;
+  margin-left: 16px;
+}
+
+.content__search--input::placeholder {
+  color: #008134;
+  font-size: 20px;
+}
+
+.content__promotions {
+  margin-top: 30px;
+}
+
+.content__promotions h2 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 60px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  margin-top: 300px;
+  justify-content: flex-end;
+}
+
+.pagination__icon {
+  cursor: pointer;
+}
+
+.pagination__icon i {
+  font-size: 24px;
+  color: #008134;
+}
+
+.pagination__number {
+  padding: 2px 15px;
+  background-color: #008134;
+  border-radius: 10px;
+  margin: 0 16px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.pagination__number:hover {
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.mr-16 {
+  margin-right: 16px;
+}
+
+.promotions__icon:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}

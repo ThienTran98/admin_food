@@ -6,3 +6,9 @@ const handleNavigate = () => {
     window.location.href = "home.html";
   }
 };
+
+const dataPromotions = [{}];
+
+const handleNavigateDashboard = () => {
+  window.location.href = "dashboard.html";
+};
