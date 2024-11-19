@@ -281,3 +281,11 @@
   opacity: 0.8;
   transition: all 0.3s ease;
 }
+
+.table-bordered.custom-border {
+  border: 2px solid #000; /* Màu viền bảng */
+}
+.table-bordered.custom-border th,
+.table-bordered.custom-border td {
+  border: 2px solid #000; /* Màu viền giữa các ô */
+}
