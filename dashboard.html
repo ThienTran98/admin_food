@@ -34,11 +34,12 @@
           <button class="header__btn">
             <a href="https://fe-18.vercel.app/">Website nhà hàng</a>
           </button>
-          <div class="header__logout">
+          <div onclick="handleLogout()" class="header__logout">
             <h2 class="header__logout--text">Log out</h2>
             <i class="fa-solid fa-right-from-bracket header__logout--icon"></i>
           </div>
         </div>
+
         <div class="side__bar">
           <div class="side__bar--img">
             <img src="./assets/img/Asset 2 1.png" alt="" />
@@ -202,10 +203,8 @@
                   <div class="tab-item active">Thông tin</div>
                   <div class="tab-item">Hình thức ưu đãi</div>
                   <div class="tab-item">Lịch sử ưu đãi</div>
-
                   <div class="line"></div>
                 </div>
-
                 <!-- Tab content -->
                 <div class="tab-content">
                   <div class="tab-pane active">
@@ -274,7 +273,13 @@
                       </div>
                     </div>
                     <div class="tab-btn">
-                      <button class="tab-btn-update">Sửa</button>
+                      <button
+                        data-toggle="modal"
+                        data-target="#exampleModalUpdateDetail"
+                        class="tab-btn-update"
+                      >
+                        Sửa
+                      </button>
                       <button class="tab-btn-delete">Xóa</button>
                     </div>
                   </div>
@@ -464,15 +469,253 @@
                 </div>
               </div>
             </div>
+            <!-- -->
             <div class="modal-footer">
               <button
                 type="button"
                 class="btn btn-success"
+                onclick="handleAddGiftVoucher()"
                 data-dismiss="modal"
               >
                 Lưu
               </button>
               <button type="button" class="btn btn-close" data-dismiss="modal">
+                Hủy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CLOSE MODAL -->
+
+      <!-- Button trigger modal -->
+
+      <!-- Modal -->
+      <!-- Button trigger modal -->
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="exampleModalCenterClose"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalCenterCloseTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h4>
+                Khuyến mãi chỉ được xóa khi có giao dịch bạn có chắc chắn muốn
+                xóa không ?
+              </h4>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                data-dismiss="modal"
+                class="btn-delete-close delete-close-confirm"
+              >
+                Xác nhận
+              </button>
+              <button
+                type="button"
+                class="btn-delete-close"
+                data-dismiss="modal"
+              >
+                Hủy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chỉnh sửa thông tin ưu đãi -->
+
+      <div
+        class="modal fade double-close-tabs"
+        id="exampleModalUpdateDetail"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalUpdateDetailTitle"
+        aria-hidden="true"
+      >
+        <div
+          class="modal-dialog modal-lg modal-dialog-centered"
+          role="document"
+        >
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="eexampleModalUpdateDetailTitle">
+                Chỉnh sửa thông tin ưu đãi
+              </h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-6">
+                  <form class="form__item">
+                    <div class="form-group form-group-item">
+                      <label for="voucher__gift">Mã ưu đãi</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="voucher__gift"
+                        value="MUD 001"
+                      />
+                    </div>
+                    <div class="form-group form-group-item">
+                      <label for="name__gift">Tên ưu đãi</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name__gift"
+                        value="Mua 1 cơm tặng 1 canh"
+                      />
+                    </div>
+                    <div class="form-group form-group-item">
+                      <label for="name__gift">Điều kiện</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name__gift"
+                        value="Áp dụng với tất cả khách hàng đến ăn tại quán khi order 1 suất cơm tấm có trị giá 150.000 VNĐ"
+                      />
+                    </div>
+                    <div class="form-group form-group-item">
+                      <label for="name__gift">Khác</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name__gift"
+                        value="Chương trình ưu đãi không áp dụng song song với các chương trình khác"
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="col-6">
+                  <form class="form__item">
+                    <div class="form-group form-group-item">
+                      <label for="voucher__gift">Ngày bắt đầu</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="voucher__gift"
+                        value="1/10/2024"
+                      />
+                    </div>
+                    <div class="form-group form-group-item">
+                      <label for="name__gift">Ngày kết thúc</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name__gift"
+                        value="3/10/2024"
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="incentives">
+                <div class="row">
+                  <div class="col-6 form__incentives">
+                    <h3>Hình thức ưu đãi</h3>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Mua món tặng món</option>
+                      <option value="1">Món 1</option>
+                      <option value="2">Món 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="food__gift-container">
+                <div class="row">
+                  <div class="col-6 food__gift">
+                    <h3>Món</h3>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected></option>
+                      <option value="1">Cơm</option>
+                      <option value="2">Lẩu</option>
+                    </select>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 food__gift">
+                      <h3>Ưu đãi</h3>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected></option>
+                        <option value="1">Mì</option>
+                        <option value="2">Canh</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- -->
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-success"
+                data-toggle="modal"
+                data-target="#exampleModalSaveClose"
+              >
+                Lưu
+              </button>
+              <button type="button" class="btn btn-close" data-dismiss="modal">
+                Hủy
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 
+      Bạn chắc chắn muốn lưu thay đổi -->
+
+      <div
+        class="modal fade"
+        id="exampleModalSaveClose"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalSaveCloseCloseTitle"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+              <h4>Bạn chắc chắn có muốn lưu thay đổi ?</h4>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                data-dismiss="modal"
+                class="btn-delete-close delete-close-confirm"
+              >
+                Xác nhận
+              </button>
+              <button
+                type="button"
+                class="btn-delete-close"
+                data-dismiss="modal"
+              >
                 Hủy
               </button>
             </div>

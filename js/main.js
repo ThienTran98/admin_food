@@ -7,7 +7,7 @@ const handleNavigate = () => {
   }
 };
 
-const dataPromotions = [
+let dataPromotions = [
   {
     tenUuDai: "Mua 1 cơm tặng 1 canh",
     batDau: "1/10/2024",
@@ -18,11 +18,6 @@ const dataPromotions = [
     batDau: "20/11/2024",
     ketThuc: "23/12/2024",
   },
-  // {
-  //   tenUuDai: "",
-  //   batDau: "",
-  //   ketThuc: "",
-  // },
 ];
 
 const handleNavigateDashboard = () => {
@@ -80,10 +75,7 @@ const handleRenderTbody = (list) => {
   for (var i = 0; i < list.length; i++) {
     var currentVoucher = list[i];
     var content = `
-    
-    
-     
-                
+      
                   <tbody class="tBodyProgram">
                     <tr class="table-light">
                       <td>${currentVoucher.tenUuDai}</td>
@@ -97,30 +89,15 @@ const handleRenderTbody = (list) => {
                           <i class="fa-regular fa-pen-to-square"></i>
                         </button>
 
-                        <button class="promotions__icon">
+                        <button   data-toggle="modal"
+            data-target="#exampleModalCenterClose" class="promotions__icon">
                           <i class="fa-regular fa-trash-can"></i>
                         </button>
                       </td>
                     </tr>
                    
                   </tbody>
-              
-              
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+            
     `;
 
     htmls += content;
@@ -142,3 +119,28 @@ const renderLength = (list) => {
 };
 
 renderLength(dataPromotions);
+
+const handleAddGiftVoucher = () => {
+  let dataList = dataPromotions.push({
+    tenUuDai: "Lễ tết giảm giá siêu hời",
+    batDau: "30/12/2024",
+    ketThuc: "04/01/2024",
+  });
+  handleRenderTbody(dataPromotions);
+  renderLength(dataPromotions);
+};
+
+const handleLogout = () => {
+  window.location.href = "index.html";
+};
+
+// const handleClickDoubleCloseTab = () => {
+//   const clickDouble = document.querySelector(".double-close-tabs");
+//   const clickDoubleShow = document.querySelector(".modal-backdrop.show");
+//   const clickDoubleFade = document.querySelector(".modal-backdrop.fade");
+
+//   clickDoubleShow.classList.remove("show");
+//   clickDoubleShow.classList.remove("fade");
+//   clickDoubleShow.classList.remove("modal-backdrop");
+
+// };
