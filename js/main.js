@@ -12,11 +12,13 @@ let dataPromotions = [
     tenUuDai: "Mua 1 cơm tặng 1 canh",
     batDau: "1/10/2024",
     ketThuc: "3/10/2024",
+    id: Math.floor(Math.random() * 100),
   },
   {
     tenUuDai: "Giám giá giáng sinh",
     batDau: "20/11/2024",
     ketThuc: "23/12/2024",
+    id: Math.floor(Math.random(100) * 100),
   },
 ];
 
@@ -89,8 +91,7 @@ const handleRenderTbody = (list) => {
                           <i class="fa-regular fa-pen-to-square"></i>
                         </button>
 
-                        <button   data-toggle="modal"
-            data-target="#exampleModalCenterClose" class="promotions__icon">
+                        <button onclick="handleDeleteItem('${currentVoucher.id}')" class="promotions__icon promotions__icon--delete">
                           <i class="fa-regular fa-trash-can"></i>
                         </button>
                       </td>
@@ -125,6 +126,7 @@ const handleAddGiftVoucher = () => {
     tenUuDai: "Lễ tết giảm giá siêu hời",
     batDau: "30/12/2024",
     ketThuc: "04/01/2024",
+    id: Math.floor(Math.random() * 100),
   });
   handleRenderTbody(dataPromotions);
   renderLength(dataPromotions);
@@ -134,13 +136,14 @@ const handleLogout = () => {
   window.location.href = "index.html";
 };
 
-// const handleClickDoubleCloseTab = () => {
-//   const clickDouble = document.querySelector(".double-close-tabs");
-//   const clickDoubleShow = document.querySelector(".modal-backdrop.show");
-//   const clickDoubleFade = document.querySelector(".modal-backdrop.fade");
-
-//   clickDoubleShow.classList.remove("show");
-//   clickDoubleShow.classList.remove("fade");
-//   clickDoubleShow.classList.remove("modal-backdrop");
-
-// };
+const handleDeleteItem = (id) => {
+  let index = dataPromotions.findIndex(function (voucher) {
+    return voucher.id == id;
+  });
+  if (index == -1) {
+    return;
+  }
+  dataPromotions.splice(index, 1);
+  handleRenderTbody(dataPromotions);
+  renderLength(dataPromotions);
+};
