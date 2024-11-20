@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Dash Board</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -125,51 +125,197 @@
           </div>
           <div class="content__promotions">
             <h2>Chương trình ưu đãi</h2>
-            <table class="table table-bordered custom-border">
-              <thead>
-                <tr class="table-success">
-                  <th>Tên ưu đãi</th>
-                  <th>Bắt đầu</th>
-                  <th>Kết thúc</th>
-                  <th>Thao tác</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="table-light">
-                  <td>Mua 1 cơm tặng 1 canh</td>
-                  <td>1/10/2024</td>
-                  <td>3/10/2024</td>
-                  <td>
-                    <i
-                      class="fa-regular fa-pen-to-square mr-16 promotions__icon"
-                    ></i>
-                    <i class="fa-regular fa-trash-can promotions__icon"></i>
-                  </td>
-                </tr>
-                <tr class="table-light">
-                  <td>Giám giá giáng sinh</td>
-                  <td>20/11/2024</td>
-                  <td>23/12/2024</td>
-                  <td>
-                    <i
-                      class="fa-regular fa-pen-to-square mr-16 promotions__icon"
-                    ></i>
-                    <i class="fa-regular fa-trash-can promotions__icon"></i>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <!-- 
+            program gift -->
+            <div class="program__gift">
+              <div>
+                <table class="table table-bordered custom-border">
+                  <thead>
+                    <tr class="table-success">
+                      <th>Tên ưu đãi</th>
+                      <th>Bắt đầu</th>
+                      <th>Kết thúc</th>
+                      <th>Thao tác</th>
+                    </tr>
+                  </thead>
+                  <tbody class="tBody">
+                    <!-- <tr class="table-light">
+                      <td>Mua 1 cơm tặng 1 canh</td>
+                      <td>1/10/2024</td>
+                      <td>3/10/2024</td>
+                      <td>
+                        <button
+                          onclick="handleClickModal()"
+                          class="mr-16 promotions__icon"
+                        >
+                          <i class="fa-regular fa-pen-to-square"></i>
+                        </button>
 
-            <div class="quantity__promotions">
-              <h3>Số lượng : <span>2</span></h3>
-            </div>
-            <div class="pagination">
-              <div class="pagination__icon">
-                <i class="fa-solid fa-chevron-left"></i>
+                        <button class="promotions__icon">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr>
+                    <tr class="table-light">
+                      <td>Giám giá giáng sinh</td>
+                      <td>20/11/2024</td>
+                      <td>23/12/2024</td>
+                      <td>
+                        <button class="mr-16 promotions__icon">
+                          <i class="fa-regular fa-pen-to-square"></i>
+                        </button>
+
+                        <button class="promotions__icon">
+                          <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                      </td>
+                    </tr> -->
+                  </tbody>
+                </table>
+                <div class="quantity__promotions">
+                  <h3>Số lượng : <span class="quantityLenght">2</span></h3>
+                </div>
               </div>
-              <div class="pagination__number"><h3>1</h3></div>
-              <div class="pagination__icon">
-                <i class="fa-solid fa-chevron-right"></i>
+              <div class="pagination">
+                <div class="pagination__icon">
+                  <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="pagination__number"><h3>1</h3></div>
+                <div class="pagination__icon">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </div>
+              </div>
+            </div>
+            <!-- detail__gift -->
+            <div class="detail__gift d-none">
+              <div class="detail__gift--header">
+                <h3>Mua 1 cơm tặng 1 canh</h3>
+                <div class="gift__header--icon">
+                  <i
+                    onclick="handleHideModal()"
+                    class="fa-solid fa-xmark gift__icon--btn"
+                  ></i>
+                </div>
+              </div>
+              <div class="detail__gift--content">
+                <div class="tabs">
+                  <div class="tab-item active">Thông tin</div>
+                  <div class="tab-item">Hình thức ưu đãi</div>
+                  <div class="tab-item">Lịch sử ưu đãi</div>
+
+                  <div class="line"></div>
+                </div>
+
+                <!-- Tab content -->
+                <div class="tab-content">
+                  <div class="tab-pane active">
+                    <div class="row px-2 py-3">
+                      <div class="col-6">
+                        <form class="form__item">
+                          <div class="form-group form-group-item">
+                            <label for="voucher__gift">Mã ưu đãi</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="voucher__gift"
+                              value="MUD 001"
+                            />
+                          </div>
+                          <div class="form-group form-group-item">
+                            <label for="name__gift">Tên ưu đãi</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="name__gift"
+                              value="Mua 1 cơm tặng 1 canh"
+                            />
+                          </div>
+                          <div class="form-group form-group-item">
+                            <label for="name__gift">Điều kiện</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="name__gift"
+                              value="Áp dụng với tất cả khách hàng đến ăn tại quán khi order 1 suất cơm tấm có trị giá 150.000 VNĐ"
+                            />
+                          </div>
+                          <div class="form-group form-group-item">
+                            <label for="name__gift">Khác</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="name__gift"
+                              value="Chương trình ưu đãi không áp dụng song song với các chương trình khác"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                      <div class="col-6">
+                        <form class="form__item">
+                          <div class="form-group form-group-item">
+                            <label for="voucher__gift">Ngày bắt đầu</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="voucher__gift"
+                              value="1/10/2024"
+                            />
+                          </div>
+                          <div class="form-group form-group-item">
+                            <label for="name__gift">Ngày kết thúc</label>
+                            <input
+                              type="text"
+                              class="form-control"
+                              id="name__gift"
+                              value="3/10/2024"
+                            />
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div class="tab-btn">
+                      <button class="tab-btn-update">Sửa</button>
+                      <button class="tab-btn-delete">Xóa</button>
+                    </div>
+                  </div>
+                  <div class="tab-pane px-3">
+                    <h2 class="mt-5">Đồ ăn - Mua món tặng món</h2>
+                    <table class="table table-bordered custome-border">
+                      <thead>
+                        <tr class="table-success">
+                          <th class="text-center" scope="col">Món mua</th>
+                          <th class="text-center" scope="col">Món tặng</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="table-secondary">
+                          <td>Cơm tấm</td>
+                          <td>Canh bí ngô</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div class="tab-pane px-3">
+                    <table class="table table-bordered custome-border">
+                      <thead>
+                        <tr class="table-success">
+                          <th class="text-center" scope="col">Mã ưu đãi</th>
+                          <th class="text-center" scope="col">
+                            Thời gian sử dụng
+                          </th>
+                          <th class="text-center" scope="col">Mã khách hàng</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="table-secondary">
+                          <td>MUD 001</td>
+                          <td>1/10/2024</td>
+                          <td>HK001</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -181,6 +327,7 @@
       <!-- Button trigger modal -->
 
       <!-- Modal -->
+      <!--  -->
       <div
         class="modal fade"
         id="exampleModalCenter"
@@ -189,11 +336,14 @@
         aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true"
       >
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div
+          class="modal-dialog modal-lg modal-dialog-centered"
+          role="document"
+        >
           <div class="modal-content">
             <div class="modal-header">
               <h5 class="modal-title" id="exampleModalLongTitle">
-                Modal title
+                Thêm ưu đãi
               </h5>
               <button
                 type="button"
@@ -204,17 +354,126 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <div class="modal-body">...</div>
+            <div class="modal-body">
+              <div class="row">
+                <div class="col-6">
+                  <form class="form__item">
+                    <div class="form-group form-group-item">
+                      <label for="voucher__gift">Mã ưu đãi</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="voucher__gift"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="form-group form-group-item">
+                      <label for="name__gift">Tên ưu đãi</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name__gift"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="form-group form-group-item">
+                      <label for="name__gift">Điều kiện</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name__gift"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="form-group form-group-item">
+                      <label for="name__gift">Khác</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name__gift"
+                        placeholder=""
+                      />
+                    </div>
+                  </form>
+                </div>
+                <div class="col-6">
+                  <form class="form__item">
+                    <div class="form-group form-group-item">
+                      <label for="voucher__gift">Ngày bắt đầu</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="voucher__gift"
+                        placeholder=""
+                      />
+                    </div>
+                    <div class="form-group form-group-item">
+                      <label for="name__gift">Ngày kết thúc</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name__gift"
+                        placeholder=""
+                      />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="incentives">
+                <div class="row">
+                  <div class="col-6 form__incentives">
+                    <h3>Hình thức ưu đãi</h3>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Mua món tặng món</option>
+                      <option value="1">Món 1</option>
+                      <option value="2">Món 2</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="food__gift-container">
+                <div class="row">
+                  <div class="col-6 food__gift">
+                    <h3>Món</h3>
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected></option>
+                      <option value="1">Cơm</option>
+                      <option value="2">Lẩu</option>
+                    </select>
+                  </div>
+                  <div class="row">
+                    <div class="col-6 food__gift">
+                      <h3>Ưu đãi</h3>
+                      <select
+                        class="form-select"
+                        aria-label="Default select example"
+                      >
+                        <option selected></option>
+                        <option value="1">Mì</option>
+                        <option value="2">Canh</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                class="btn btn-success"
                 data-dismiss="modal"
               >
-                Close
+                Lưu
               </button>
-              <button type="button" class="btn btn-primary">
-                Save changes
+              <button type="button" class="btn btn-close" data-dismiss="modal">
+                Hủy
               </button>
             </div>
           </div>
@@ -236,5 +495,6 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

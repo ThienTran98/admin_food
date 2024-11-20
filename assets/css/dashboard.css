@@ -275,7 +275,13 @@
 .mr-16 {
   margin-right: 16px;
 }
-
+.promotions__icon {
+  border: none;
+  background-color: #fff;
+}
+.promotions__icon:focus {
+  outline: none;
+}
 .promotions__icon:hover {
   cursor: pointer;
   opacity: 0.8;
@@ -288,4 +294,202 @@
 .table-bordered.custom-border th,
 .table-bordered.custom-border td {
   border: 2px solid #000; /* Màu viền giữa các ô */
+}
+
+.table-bordered.custome-border {
+  border: 2px solid #000; /* Màu viền bảng */
+}
+.table-bordered.custome-border th,
+.table-bordered.custome-border td {
+  border: 2px solid #000; /* Màu viền giữa các ô */
+}
+
+/* modal add gift  */
+
+.btn-close {
+  background-color: #ff8102;
+  color: #fff;
+}
+.btn-close:hover {
+  color: #fff;
+  opacity: 0.8;
+  transition: all 0.3 ease;
+}
+
+.form-group-item {
+  display: flex;
+  align-items: center;
+}
+
+.form-group-item label {
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 60px;
+}
+.incentives {
+  padding-top: 8px;
+  padding-bottom: 16px;
+  border-top: 1px solid #008134;
+}
+.form__incentives {
+  display: flex;
+  align-items: center;
+}
+
+.form__incentives h3 {
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #008134;
+  margin-right: 8px;
+}
+.food__gift-container {
+  padding-top: 34px;
+  border-top: 1px solid #008134;
+}
+
+.food__gift {
+  display: flex;
+  align-items: center;
+}
+
+.food__gift h3 {
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #008134;
+  margin-right: 8px;
+  min-width: 60px;
+}
+
+.detail__gift {
+  border: 2px solid #008134;
+  max-width: 1100px;
+}
+
+.detail__gift--header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4px 0px;
+
+  background-color: #7abd98;
+  border-bottom: 2px solid #008134;
+}
+
+.detail__gift--header h3 {
+  padding: 0 16px;
+}
+
+.gift__header--icon {
+  margin-right: 24px;
+}
+
+.gift__header--icon i {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ff8102;
+  opacity: 0.8;
+}
+
+.gift__header--icon i:hover {
+  color: #fff;
+  opacity: 1;
+  transition: all 0.3 ease;
+}
+
+/* 
+tabs */
+
+.tabs {
+  display: flex;
+  position: relative;
+}
+.tabs .line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 6px;
+  border-radius: 15px;
+  background-color: #0081347a;
+  transition: all 0.2s ease;
+}
+.tab-item {
+  min-width: 33.3333%;
+  padding: 16px 20px 11px 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #000;
+  background-color: #0081347a;
+  border-bottom: 5px solid transparent;
+  opacity: 1;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.tab-icon {
+  font-size: 24px;
+  width: 32px;
+  position: relative;
+  top: 2px;
+}
+.tab-item:hover {
+  opacity: 1;
+  background-color: #c1d9cb;
+  border-color: #c1d9cb;
+}
+.tab-item.active {
+  opacity: 0.7;
+}
+.tab-content {
+  padding: 28px 0;
+}
+.tab-pane {
+  color: #333;
+  min-height: 360px;
+  display: none;
+}
+.tab-pane.active {
+  display: block;
+}
+.tab-pane h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.tab-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: 1;
+  margin-right: 50px;
+}
+
+.tab-btn-update {
+  outline: none;
+  border: none;
+
+  min-width: 120px;
+  background-color: #008134;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 4px 0;
+}
+
+.tab-btn-update:hover,
+.tab-btn-delete:hover {
+  opacity: 0.8;
+}
+
+.tab-btn-delete {
+  border: none;
+  outline: none;
+  min-width: 120px;
+  background-color: #ff8102;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 4px 0;
+  margin-left: 24px;
 }
