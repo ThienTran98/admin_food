@@ -91,7 +91,7 @@ const handleRenderTbody = (list) => {
                           <i class="fa-regular fa-pen-to-square"></i>
                         </button>
 
-                        <button onclick="handleDeleteItem('${currentVoucher.id}')" class="promotions__icon promotions__icon--delete">
+                        <button data-toggle="modal" data-target="#exampleModalCenterClose" name="${currentVoucher.id}" class="promotions__icon promotions__icon--delete">
                           <i class="fa-regular fa-trash-can"></i>
                         </button>
                       </td>
@@ -137,13 +137,22 @@ const handleLogout = () => {
 };
 
 const handleDeleteItem = (id) => {
-  let index = dataPromotions.findIndex(function (voucher) {
-    return voucher.id == id;
+  let data = document.querySelectorAll(
+    ".promotions__icon.promotions__icon--delete"
+  );
+  var items = 0;
+  data.forEach((item, index) => {
+    items = item.getAttribute("name");
   });
-  if (index == -1) {
+
+  let index = dataPromotions.findIndex(function (voucher) {
+    return voucher.id == items;
+  });
+  if (index === -1) {
     return;
+  } else {
+    dataPromotions.splice(index, 1);
+    handleRenderTbody(dataPromotions);
+    renderLength(dataPromotions);
   }
-  dataPromotions.splice(index, 1);
-  handleRenderTbody(dataPromotions);
-  renderLength(dataPromotions);
 };
